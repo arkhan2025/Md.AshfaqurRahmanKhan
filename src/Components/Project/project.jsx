@@ -1,36 +1,43 @@
 import React, { useState } from "react";
 import "./project.css";
+
 import uniHome from "../../assets/Uni/Uni Home.png";
 import uniCourses from "../../assets/Uni/Uni Courses.png";
 import uniGalary from "../../assets/Uni/Uni Galary.png";
 import uniContact from "../../assets/Uni/Uni Contact.png";
+
 import brandThumb from "../../assets/Brand Page.png";
 import interactiveThumb from "../../assets/3D.png";
 import foodyThumb from "../../assets/Foody Zone.png";
 import bankingThumb from "../../assets/Baankiing Technology.png";
+
 import musicDiscover from "../../assets/Music/Discover.png";
 import musicTopCharts from "../../assets/Music/Top Charts.png";
 import musicPlaying from "../../assets/Music/Playing.png";
 import musicPlaylist from "../../assets/Music/Playlist.png";
 import musicTopArtist from "../../assets/Music/Top Artist.png";
+
 import clinicFind from "../../assets/Clinic Management System/Find Patient.png";
 import clinicPatientCreation from "../../assets/Clinic Management System/Patient Creation.png";
 import clinicPatient from "../../assets/Clinic Management System/Patient List.png";
 import clinicReceptionist from "../../assets/Clinic Management System/Receptionist Dashboard.png";
 import clinicToken from "../../assets/Clinic Management System/Token Creation.png";
+
 import donationCampaign from "../../assets/Donation Platform/Campaign Creation.png";
 import donationCampaignList from "../../assets/Donation Platform/Campaign List.png";
 import donationCart from "../../assets/Donation Platform/Cart.png";
 import donationCheckout from "../../assets/Donation Platform/Checkout.png";
 import donationSearched from "../../assets/Donation Platform/Searched Campaigns.png";
+
 import quizDashboardA from "../../assets/Quiz Platform/Dashboard attempt.png";
 import quizDashboardQ from "../../assets/Quiz Platform/Dashboard quiz.png";
 import quizprofile  from "../../assets/Quiz Platform/Profile.png";
 import quizlist from "../../assets/Quiz Platform/Quiz List.png";
 import quizes from "../../assets/Quiz Platform/Quiz.png";
 import quizRegistration from "../../assets/Quiz Platform/Registration.png";
+
 import communityTrackerAdmin from "../../assets/Project Tracker/Admin Dashboard.png";
-import communityTrackerAvailableDashboard from "../../assets/Project Tracker/Available user dashboard.png";
+import communityTrackerAvailableDashboard from "../../assets/Project Tracker/Available user Dashboard.png";
 import communityTrackerAssigned from "../../assets/Project Tracker/Project Assigned User Dashboard.png";
 import communityTrackerCompleted from "../../assets/Project Tracker/Completed Project.png";
 import communityTrackerLogin from "../../assets/Project Tracker/Login.png";
