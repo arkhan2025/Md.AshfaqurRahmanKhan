@@ -1,0 +1,402 @@
+.combined-section {
+  width: 100%;
+  background: #fde6bd;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  padding-bottom: 0;
+  margin-bottom: -17px;
+}
+
+  .cv {
+  display: inline-block;      
+  color: rgb(255, 15, 15);               
+  background: linear-gradient(rgba(164, 230, 245, 0.988), rgba(233, 180, 254, 0.988));
+  border-radius: 25px 0 25px 0;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;     
+  border: none !important;              
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.cv:link,
+.cv:visited,
+.cv:hover,
+.cv:active {
+  text-decoration: none !important;     
+  color: rgb(255, 15, 15);            
+}
+
+.cv:hover {
+  background: linear-gradient(135deg, #e52e71, #ff8a00);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: white !important;               
+}
+
+
+.combined-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 3rem auto;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+.text-container {
+  flex: 1 1 55%;
+  min-width: 300px;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  .cv{
+    text-decoration: none;
+    margin-left: 20rem;
+    margin-top: 3rem;
+  }
+}
+.home-info, .about-info{
+  text-align: left;
+  margin-left: -9rem;
+  max-width: 1200px;
+}
+
+.home-info .hl {
+  font-family: "Parisienne", cursive;
+  font-size: 75px;
+  text-align: center;
+  margin: 0;
+}
+
+.home-info .nm {
+  display: flex;
+  align-items: baseline;
+  font-size: 45px;
+  margin-top: -20px;
+  width: 1200px;
+}
+
+.home-info h1 {
+  color: #3a6175;
+  margin: 0 0.5rem 0 0;
+}
+
+.home-info h3 {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.home-info h5 {
+  font-size: 1rem;
+  color: #555;
+  margin: 2rem 0 0.2rem 0;
+}
+
+h1.ab{
+  text-align: center;
+  font-size: 45px;
+  color: #e52e71;
+}
+
+.tagline {
+  margin-top: -10px;
+  margin-left: 4rem;
+  width: 1000px;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.contact-address p,
+.contact-info p,
+.social-links p {
+  margin: 0.3rem 0;
+  font-size: 20px;
+}
+
+.contact-address,
+.contact-info,
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.contact-address,
+.contact-info p,
+.social-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-links a {
+  color: #ff8a00;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #e52e71;
+}
+
+.about-info {
+  margin-top: 6rem;
+  margin-left: -9rem;
+}
+
+.professional-summary,
+.education {
+  margin-top: 5rem;
+  font-size: 24px;
+}
+
+.professional-summary h2,
+.education h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.professional-summary p,
+.education p {
+  line-height: 1.6;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.image-container {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 300px;
+
+}
+
+.image-container img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transform: translateX(120px) translateY(30px) scale(1);
+}
+
+@media (max-width: 1654px) {
+  .text-container{
+    margin-left: 4rem;
+  }
+  .nm h1{
+    font-size: 85px;
+  }
+  .image-container{
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 1280px) {
+
+  .text-container {
+    flex: 1 1 60%;
+    padding-right: 1rem;
+    margin-left: 130px;
+    margin-top: -4rem;
+    margin-bottom: -30px;
+  }
+
+  .image-container {
+    flex: 1 1 30%; 
+    margin-left: -16rem;
+    margin-right: 6rem;
+  }
+
+  .t{
+    margin-top: -20px;
+  }
+
+.contact-address{
+  line-height: 0px;
+
+}
+  .home-info .nm {
+    width: 100%;
+    font-size: 28px;
+    margin-left: 0;
+    margin-top: -45px;
+  }
+
+  .tagline {
+    width: 90%;
+    font-size: 1.6rem;
+    margin-left: 60px;
+  }
+
+  .about-info {
+    margin-left: 0; 
+    margin-top: -3rem;
+    max-width: 900px;
+    margin-left: -230px;
+    max-width: 700px;
+  }
+  .education{
+    margin-top: -25px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .text-container {
+    flex: 1 1 45%;
+    padding-right: 0.5rem;
+    margin-left: 30px 0;
+    margin-top: -40ox;
+    margin-bottom: 0;
+  }
+
+  .image-container {
+    flex: 1 1 30%;
+    margin-left: 0;
+    margin-right: 40;
+    img{
+      transform: translateX(-70px) translateY(0px) scale(1);
+    }
+  }
+
+  .home-info .nm {
+    width: 100%;
+    font-size: 24px;
+    margin-left: 0;
+    margin-top: -5px;
+  }
+
+  .t {
+    width: 90%;
+    font-size: 1.4rem;
+    margin-left: 0;
+    margin-top: -10px;
+  }
+
+  .about-info {
+    margin-left: 0;
+    margin-top: 1.5rem;
+    max-width: 750px;
+  }
+
+  .professional-summary,
+  .education {
+    margin-top: 1rem;
+    margin-left: -9rem;
+  }
+
+  .t {
+    margin-top: 0;
+  }
+
+  .contact-address {
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-info .hl {
+    font-size: 55px;
+  }
+
+    .text-container .cv{
+    margin-left: 0;
+  }
+
+  .home-info .nm h1 {
+    font-size: 30px;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .about-info {
+    margin-top: 1.5rem;
+    margin-left: -9rem;
+  }
+
+  .professional-summary,
+  .education {
+    font-size: 0.95rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 475px) {
+  .combined-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 70px;
+    margin-top: -0.5rem;
+  }
+
+  .text-container,
+  .image-container {
+    flex: 1 1 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .home-info{
+    margin-left: -6.5em;
+  }
+
+  .home-info .hl {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .text-container .cv{
+    margin-left: 0;
+  }
+
+  .home-info .nm h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .contact-address p,
+  .contact-info p,
+  .social-links p {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .professional-summary,
+  .education {
+    font-size: 0.85rem;
+    margin-left: 0;
+    text-align: left;
+    margin-left: 3rem;
+    width: 400px;
+  }
+
+  .education{
+    margin-bottom: -30px;
+    text-align: left;
+  }
+
+  .image-container img {
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: -32px;
+    margin-left: 0px;
+    justify-content: center;
+    margin-left: 50px;
+  }
+}
+
+
