@@ -17,7 +17,7 @@ const Combined = () => {
             <div className="t">
               <h5>Who's a</h5>
               <p className="tagline">
-                CSE Graduate | Web Developer | Java Developer | SEO Specialist
+                Web Developer | Full Stack Developer | Software Engineer
               </p>
             </div>
             <div className="contact-address">
