@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/AR khan.png";
+import logo from "../../assets/Ar khan.png";
 import "./home.css";
 
 const Combined = () => {
