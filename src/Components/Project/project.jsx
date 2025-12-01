@@ -37,7 +37,7 @@ import quizes from "../../assets/Quiz Platform/Quiz.png";
 import quizRegistration from "../../assets/Quiz Platform/Registration.png";
 
 import communityTrackerAdmin from "../../assets/Project Tracker/Admin Dashboard.png";
-import communityTrackerAvailableDashboard from "../../assets/Project Tracker/Available user dashboard.png";
+import communityTrackerAvailableDashboard from "../../assets/Project Tracker/Available user Dashboard.png";
 import communityTrackerAssigned from "../../assets/Project Tracker/Project Assigned User Dashboard.png";
 import communityTrackerCompleted from "../../assets/Project Tracker/Completed Project.png";
 import communityTrackerLogin from "../../assets/Project Tracker/Login.png";
