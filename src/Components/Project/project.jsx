@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./project.css";
+import "./Project.css";
 
 import uniHome from "../../assets/Uni/Uni Home.png";
 import uniCourses from "../../assets/Uni/Uni Courses.png";
@@ -37,7 +37,7 @@ import quizes from "../../assets/Quiz Platform/Quiz.png";
 import quizRegistration from "../../assets/Quiz Platform/Registration.png";
 
 import communityTrackerAdmin from "../../assets/Project Tracker/Admin Dashboard.png";
-import communityTrackerAvailableDashboard from "../../assets/Project Tracker/Available user Dashboard.png";
+import communityTrackerAvailableDashboard from "../../assets/Project Tracker/Available user dashboard.png";
 import communityTrackerAssigned from "../../assets/Project Tracker/Project Assigned User Dashboard.png";
 import communityTrackerCompleted from "../../assets/Project Tracker/Completed Project.png";
 import communityTrackerLogin from "../../assets/Project Tracker/Login.png";
@@ -46,6 +46,10 @@ import communityTrackerProfile from "../../assets/Project Tracker/Profile.png";
 import communityTrackerList from "../../assets/Project Tracker/Project List.png";
 import communityTrackerRegistration from "../../assets/Project Tracker/Registration.png";
 import communityTrackerRunning from "../../assets/Project Tracker/Running Project.png";
+
+import soilHome from "../../assets/Soil Farming Agent/Home.png";
+import soilSoil from "../../assets/Soil Farming Agent/Soil Details.png";
+import soilDistributor from "../../assets/Soil Farming Agent/Distributor Details.png";
 
 const projects = [
   {
@@ -61,6 +65,13 @@ const projects = [
       "A full-featured MERN clinic management system with patient management, prescriptions, tokens, and billing.",
     github: "https://github.com/arkhan2025/ClinicManagementSystem",
     images: [clinicFind, clinicPatientCreation, clinicPatient, clinicReceptionist, clinicToken],
+  },
+  {
+    title: "Soil Farming Agent",
+    description:
+      "A soil farming agent platform connecting farmers with soil distributors for better resource management.",
+    github: "https://github.com/arkhan2025/Soil_Farming_Agent",
+    images: [soilHome, soilSoil, soilDistributor],
   },
   {
     title: "Donation Platform",
