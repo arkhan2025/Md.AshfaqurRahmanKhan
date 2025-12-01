@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Project.css";
+import "./project.css";
 
 import uniHome from "../../assets/Uni/Uni Home.png";
 import uniCourses from "../../assets/Uni/Uni Courses.png";
