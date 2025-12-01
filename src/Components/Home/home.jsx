@@ -21,10 +21,10 @@ const Combined = () => {
               </p>
             </div>
             <div className="contact-address">
-              <p>307, Kawlar Sandartek, Uttara, Dhaka - 1229</p>
+              <p>Kawlar, Uttara, Dhaka - 1229</p>
             </div>
             <div className="contact-info">
-              <p>+88 01727671870</p>
+              <p>+880 1727671870</p>
               <p>ashfaqur.rahman.khan.zayed@gmail.com</p>
             </div>
             <div className="social-links">
@@ -87,12 +87,11 @@ const Combined = () => {
               <p>
                 <strong>Bachelor of Science in Computer Science & Engineering</strong>
                 <br />
-                Shyamoli Textile Engineering College (Affiliated with University of
-                Dhaka)
+                University of Dhaka, Technology Unit
                 <br />
-                Cumulative GPA 3.42 out of 4.00 (Till the 7th Semester)
+                Cumulative GPA 3.45 out of 4.00
                 <br />
-                (February 2020 – July 2025)
+                (February 2020 – November 2025)
               </p>
               <p>
                 <strong>Core Subjects:</strong> Object-Oriented Programming, Data
