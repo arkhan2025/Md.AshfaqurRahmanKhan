@@ -29,7 +29,7 @@ const Skills = () => {
 
           <div className="skills-subcategory">
             <h4>Web Technologies</h4>
-            <p> HTML, CSS, React.js, Tailwind</p>
+            <p> HTML, CSS, React.js, Node.js, Tailwind</p>
           </div>
 
           <div className="skills-subcategory">
