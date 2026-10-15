@@ -1,6 +1,17 @@
 import React, { useState } from "react";
+import {
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  Maximize2,
+  X,
+  Layers,
+  Sparkles
+} from "lucide-react";
+import { GithubIcon } from "../Common/Icons.jsx";
 import "./project.css";
 
+// Assets
 import uniHome from "../../assets/Uni/Uni Home.png";
 import uniCourses from "../../assets/Uni/Uni Courses.png";
 import uniGalary from "../../assets/Uni/Uni Galary.png";
@@ -31,7 +42,7 @@ import donationSearched from "../../assets/Donation Platform/Searched Campaigns.
 
 import quizDashboardA from "../../assets/Quiz Platform/Dashboard attempt.png";
 import quizDashboardQ from "../../assets/Quiz Platform/Dashboard quiz.png";
-import quizprofile  from "../../assets/Quiz Platform/Profile.png";
+import quizprofile from "../../assets/Quiz Platform/Profile.png";
 import quizlist from "../../assets/Quiz Platform/Quiz List.png";
 import quizes from "../../assets/Quiz Platform/Quiz.png";
 import quizRegistration from "../../assets/Quiz Platform/Registration.png";
@@ -53,130 +64,387 @@ import soilDistributor from "../../assets/Soil Farming Agent/Distributor Details
 
 const projects = [
   {
+    id: 1,
     title: "Music Player App",
+    category: "Full Stack",
+    tags: ["React", "Redux", "Tailwind CSS", "Deezer API", "Lyrics.ovh"],
     description:
-      "A music discovery app integrating Deezer API and Lyrics.ovh with song search, top charts, and lyrics display.",
+      "A modern music streaming web app built with React, Redux, and Tailwind CSS. Features real-time music discovery, lyrics synchronization, top charts, and an interactive playback overlay.",
     github: "https://github.com/arkhan2025/Music_player",
+    demo: "https://music-player-eight-lime.vercel.app",
     images: [musicDiscover, musicTopCharts, musicPlaying, musicPlaylist, musicTopArtist],
   },
   {
+    id: 2,
     title: "Clinic Management System",
+    category: "Full Stack",
+    tags: ["MERN Stack", "Node.js", "Express", "MongoDB", "JWT Auth", "REST API"],
     description:
-      "A full-featured MERN clinic management system with patient management, prescriptions, tokens, and billing.",
+      "A comprehensive clinical workflow platform with patient registration, digital prescriptions, token generation, receptionist dashboard, and billing management.",
     github: "https://github.com/arkhan2025/ClinicManagementSystem",
+    demo: "https://clinic-management-system-sable-iota.vercel.app",
     images: [clinicFind, clinicPatientCreation, clinicPatient, clinicReceptionist, clinicToken],
   },
   {
+    id: 3,
     title: "Soil Farming Agent",
+    category: "Full Stack",
+    tags: ["MongoDB", "Express", "React", "Node.js", "AgriTech", "Role Auth"],
     description:
-      "A soil farming agent platform connecting farmers with soil distributors for better resource management.",
+      "A smart agriculture platform connecting farmers with verified soil distributors for optimized resource management, soil condition tracking, and admin seed governance.",
     github: "https://github.com/arkhan2025/Soil_Farming_Agent",
+    demo: "https://soil-farming-agent-orcin.vercel.app",
     images: [soilHome, soilSoil, soilDistributor],
   },
   {
+    id: 4,
     title: "Donation Platform",
+    category: "Full Stack",
+    tags: ["React", "Node.js", "Express", "MongoDB", "NGO Fundraising", "Checkout"],
     description:
-      "An NGO donation platform for campaign creation, donor tracking, and secure payment handling.",
+      "An NGO fundraising web platform with campaign creation, approval workflows, donor contribution tracking, cart checkout, and NGO dashboard management.",
     github: "https://github.com/arkhan2025/JamunaFoundationWebDev/tree/main/Donation-Platform",
+    demo: "https://donation-platform-omega.vercel.app",
     images: [donationCampaign, donationCampaignList, donationCart, donationCheckout, donationSearched],
   },
   {
+    id: 5,
     title: "Educational Quiz Platform",
+    category: "Full Stack",
+    tags: ["React", "Express", "MongoDB", "Leaderboard", "Real-Time Assessment"],
     description:
-      "An interactive quiz platform with authentication, quiz participation, and leaderboard features.",
+      "An interactive assessment platform featuring timed quizzes, instant score evaluations, student performance analytics, and instructor quiz creation tools.",
     github: "https://github.com/arkhan2025/JamunaFoundationWebDev/tree/main/Educational-Quiz-Platform",
+    demo: "https://quiz-platform-gamma.vercel.app",
     images: [quizDashboardA, quizDashboardQ, quizprofile, quizlist, quizes, quizRegistration],
   },
   {
+    id: 6,
     title: "Community Project Tracker",
+    category: "Full Stack",
+    tags: ["MERN Stack", "Role Dashboard", "Project Lifecycle", "CRUD API"],
     description:
-      "A full-stack platform for managing community projects with CRUD operations, updates, and user interactions.",
+      "A collaborative management portal for tracking community development initiatives with task assignment, lifecycle states (Running, Completed), and administrative dashboards.",
     github: "https://github.com/arkhan2025/JamunaFoundationWebDev/tree/main/Community-Project-Tracker",
-    images: [communityTrackerAdmin, communityTrackerAvailableDashboard, communityTrackerAssigned, communityTrackerCompleted, communityTrackerLogin, communityTrackerProjectCreation, communityTrackerProfile, communityTrackerList, communityTrackerRegistration, communityTrackerRunning],
+    demo: "https://jamuna-foundation-web-dev.vercel.app",
+    images: [
+      communityTrackerAdmin,
+      communityTrackerAvailableDashboard,
+      communityTrackerAssigned,
+      communityTrackerCompleted,
+      communityTrackerLogin,
+      communityTrackerProjectCreation,
+      communityTrackerProfile,
+      communityTrackerList,
+      communityTrackerRegistration,
+      communityTrackerRunning,
+    ],
   },
   {
+    id: 7,
     title: "Next Gen University",
+    category: "Frontend",
+    tags: ["React", "Responsive UI", "Academic Portal", "Course Catalog"],
     description:
-      "A demo university website showcasing academic programs, courses, and campus info with a modern responsive UI.",
+      "A modern responsive university portal showcasing academic faculties, course curriculums, interactive campus gallery, and student admissions inquiry systems.",
     github: "https://github.com/arkhan2025/next_gen_university",
+    demo: "https://next-gen-university.vercel.app",
     images: [uniHome, uniCourses, uniGalary, uniContact],
   },
   {
-    title: "Adidas Brand Landing Page",
+    id: 8,
+    title: "Adidas Brand Showcase",
+    category: "Frontend",
+    tags: ["React", "Vite", "Modern CSS", "Brand Marketing"],
     description:
-      "A landing page for the Adidas brand, highlighting products and marketing campaigns with smooth animations.",
+      "A sleek brand showcase landing page crafted for modern apparel lines, emphasizing dynamic product hero banners, marketing storyboards, and fluid responsive design.",
     github: "https://github.com/arkhan2025/brandPage",
+    demo: "https://brand-page.vercel.app",
     images: [brandThumb],
   },
   {
+    id: 9,
     title: "3D Interactive Webpage",
+    category: "Frontend",
+    tags: ["HTML5", "CSS3 3D", "Perspective Depth", "Interactive UI"],
     description:
-      "An interactive 3D webpage with animations and user interactions built with modern web technologies.",
+      "An exploratory 3D webpage featuring real-time perspective transitions, interactive elements, fluid motion styling, and responsive dimensional layouts.",
     github: "https://github.com/arkhan2025/3DInterractiveWebPage",
+    demo: "https://arkhan2025.github.io/3DInterractiveWebPage/",
     images: [interactiveThumb],
   },
   {
+    id: 10,
     title: "Foody Zone Restaurant",
+    category: "Frontend",
+    tags: ["React", "Dynamic Filter", "Food Ordering", "Menu Architecture"],
     description:
-      "A restaurant web app featuring menu, reservations, and online ordering with a modern React-based design.",
+      "A restaurant web application featuring dynamic category filtering, search, meal discovery, and an interactive menu interface powered by React.",
     github: "https://github.com/arkhan2025/FoodyZone",
+    demo: "https://foody-zone.vercel.app",
     images: [foodyThumb],
   },
   {
+    id: 11,
     title: "Banking Technology",
+    category: "Full Stack",
+    tags: ["React", "Node.js", "Financial Dashboard", "Secure UI"],
     description:
-      "A modern banking tech web demo showcasing online transactions, authentication, and user-friendly UI.",
+      "A modern banking tech platform showcasing online transaction simulation, interactive account dashboards, user credentials management, and financial workflows.",
     github: "https://github.com/arkhan2025/BankingTechnology",
+    demo: "https://banking-technology-4fe4-ou5cf1jxi.vercel.app",
     images: [bankingThumb],
   },
 ];
 
-const ImageSlider = ({ images }) => {
+const categories = ["All", "Full Stack", "Frontend"];
+
+const ImageSlider = ({ images, title, onOpenLightbox }) => {
   const [current, setCurrent] = useState(0);
 
   if (!images || images.length === 0) return null;
 
-  const nextSlide = () =>
+  const nextSlide = (e) => {
+    e.stopPropagation();
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  const prevSlide = () =>
+  };
+
+  const prevSlide = (e) => {
+    e.stopPropagation();
     setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
 
   return (
-    <div className="slider">
-      <button className="slider-btn left" onClick={prevSlide}>
-        ❮
-      </button>
-      <img src={images[current]} alt="Project Screenshot" className="slide-img" />
-      <button className="slider-btn right" onClick={nextSlide}>
-        ❯
-      </button>
+    <div className="slider-wrapper">
+      <div
+        className="slider"
+        onClick={() => onOpenLightbox(images, current, title)}
+        title="Click to zoom image"
+      >
+        <img
+          src={images[current]}
+          alt={`${title} screenshot ${current + 1}`}
+          className="slide-img"
+          loading="lazy"
+        />
+
+        {images.length > 1 && (
+          <>
+            <button
+              className="slider-btn left"
+              onClick={prevSlide}
+              aria-label="Previous image"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              className="slider-btn right"
+              onClick={nextSlide}
+              aria-label="Next image"
+            >
+              <ChevronRight size={18} />
+            </button>
+
+            <div className="slider-dots">
+              {images.map((_, idx) => (
+                <span
+                  key={idx}
+                  className={`dot ${current === idx ? "active" : ""}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrent(idx);
+                  }}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        <div className="zoom-hint">
+          <Maximize2 size={14} />
+          <span>Zoom</span>
+        </div>
+
+        {images.length > 1 && (
+          <div className="image-counter">
+            {current + 1} / {images.length}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
 
 const Project = () => {
+  const [selectedFilter, setSelectedFilter] = useState("All");
+  const [lightboxData, setLightboxData] = useState(null);
+
+  const filteredProjects =
+    selectedFilter === "All"
+      ? projects
+      : projects.filter((p) => p.category === selectedFilter);
+
+  const openLightbox = (images, index, title) => {
+    setLightboxData({ images, index, title });
+  };
+
+  const closeLightbox = () => {
+    setLightboxData(null);
+  };
+
+  const nextLightbox = (e) => {
+    e.stopPropagation();
+    if (!lightboxData) return;
+    setLightboxData((prev) => ({
+      ...prev,
+      index: prev.index === prev.images.length - 1 ? 0 : prev.index + 1,
+    }));
+  };
+
+  const prevLightbox = (e) => {
+    e.stopPropagation();
+    if (!lightboxData) return;
+    setLightboxData((prev) => ({
+      ...prev,
+      index: prev.index === 0 ? prev.images.length - 1 : prev.index - 1,
+    }));
+  };
+
   return (
     <section id="projects" className="projects-section">
-      <h2>My Projects</h2>
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <ImageSlider images={project.images} />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="project-links">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                GitHub
-              </a>
+      <div className="projects-ambient-glow"></div>
+
+      <div className="projects-container-wrapper">
+        <div className="section-header">
+          <span className="section-tag">
+            <Layers size={14} /> Featured Work
+          </span>
+          <h2 className="section-title">Showcase of Engineered Projects</h2>
+          <p className="section-subtitle">
+            A curated portfolio of production-grade web applications, interactive platforms,
+            and enterprise systems built with full-stack technologies.
+          </p>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="project-filters">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`filter-btn ${selectedFilter === cat ? "active" : ""}`}
+              onClick={() => setSelectedFilter(cat)}
+            >
+              {cat === "All" ? `All Projects (${projects.length})` : cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Projects Cards Grid */}
+        <div className="projects-grid">
+          {filteredProjects.map((project) => (
+            <article key={project.id} className="project-card glass-card">
+              <div className="card-media-wrapper">
+                <ImageSlider
+                  images={project.images}
+                  title={project.title}
+                  onOpenLightbox={openLightbox}
+                />
+              </div>
+
+              <div className="card-content">
+                <div className="card-top-meta">
+                  <span className="card-category-tag">{project.category}</span>
+                </div>
+
+                <h3 className="project-title">{project.title}</h3>
+
+                <p className="project-desc">{project.description}</p>
+
+                {/* Tech Pills */}
+                <div className="project-tags-wrap">
+                  {project.tags.map((tag, tIdx) => (
+                    <span key={tIdx} className="project-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* 2 Dedicated Action Buttons */}
+                <div className="project-actions">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-btn btn-demo"
+                    title={`Visit ${project.title} live website`}
+                  >
+                    <span>Live Demo</span>
+                    <ExternalLink size={16} />
+                  </a>
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-btn btn-repo"
+                    title={`View ${project.title} on GitHub`}
+                  >
+                    <GithubIcon size={16} />
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      {/* Fullscreen Lightbox Modal */}
+      {lightboxData && (
+        <div className="lightbox-backdrop" onClick={closeLightbox}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="lightbox-close"
+              onClick={closeLightbox}
+              aria-label="Close image preview"
+            >
+              <X size={24} />
+            </button>
+
+            <img
+              src={lightboxData.images[lightboxData.index]}
+              alt={lightboxData.title}
+              className="lightbox-image"
+            />
+
+            {lightboxData.images.length > 1 && (
+              <>
+                <button
+                  className="lightbox-nav left"
+                  onClick={prevLightbox}
+                  aria-label="Previous"
+                >
+                  <ChevronLeft size={28} />
+                </button>
+                <button
+                  className="lightbox-nav right"
+                  onClick={nextLightbox}
+                  aria-label="Next"
+                >
+                  <ChevronRight size={28} />
+                </button>
+              </>
+            )}
+
+            <div className="lightbox-caption">
+              <h4>{lightboxData.title}</h4>
+              <p>
+                Screenshot {lightboxData.index + 1} of {lightboxData.images.length}
+              </p>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </section>
   );
 };
